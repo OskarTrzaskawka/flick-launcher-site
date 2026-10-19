@@ -24,7 +24,7 @@
     <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="workspace.css" />
     <script src="app.js" defer></script>
-  </head>
+  <link rel="stylesheet" href="effects.css"><script src="effects.js" defer></script></head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
@@ -43,7 +43,7 @@
         </button>
         <nav id="navigation" aria-label="Main navigation">
           <a href="#features">The launcher</a><a href="#inside">A closer look</a
-          ><a href="#release-notes">What's new</a><a href="#faq">FAQ</a
+          ><a href="changelog.html">Changelog</a><a href="#faq">FAQ</a
           ><a class="nav-cta" href="#download">Download <span>↗</span></a>
         </nav>
       </div>
@@ -54,7 +54,7 @@
         <div class="hero-copy">
           <a class="status-pill" href="#development"
             ><span class="status-dot"></span> IN DEVELOPMENT
-            <span class="pill-version">PREVIEW 0.6.0</span><span>↗</span></a
+            <span class="pill-version">PREVIEW 0.6.1</span><span>↗</span></a
           >
           <p class="eyebrow">AN INDEPENDENT JAVA EDITION LAUNCHER</p>
           <h1 id="hero-heading">Your Minecraft.<br />Your <span>own space.</span></h1>
@@ -62,11 +62,11 @@
           <div class="hero-actions">
             <a
               class="button primary"
-              href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.6.0/Flick-Launcher-Setup.exe"
+              href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.6.1/Flick-Launcher-Setup.exe"
               >Download for Windows <span>&#8599;</span></a
             ><a class="text-link" href="#demo">Watch it in action <span>&#9655;</span></a>
           </div>
-          <p class="hero-footnote">v0.6.0 &middot; October 19, 2026 &middot; Windows x64<br><a href="#download">Installer or Portable</a> &middot; English interface &middot; Unsigned preview</p>
+          <p class="hero-footnote">v0.6.1 &middot; October 19, 2026 &middot; Windows x64<br><a href="#download">Installer or Portable</a> &middot; English interface &middot; Unsigned preview</p>
         </div>
         <div class="hero-visual">
           <div class="visual-glow"></div>
@@ -170,8 +170,8 @@
         </div>
       </section>
 <section id="demo" class="section-wrap demo-section" aria-labelledby="demo-heading"><div class="section-heading"><div><p class="eyebrow">FROM AN EMPTY LIBRARY TO READY</p><h2 id="demo-heading">See the real workflow.</h2></div><p>A recording of the desktop application: create a profile, install Sodium from Modrinth and make a backup.</p></div><video controls playsinline preload="none" poster="assets/launcher-home.png" aria-label="Flick Launcher setup demonstration"><source src="assets/launcher-tour.webm" type="video/webm">Your browser cannot play this recording. <a href="assets/launcher-tour.webm">Download the video</a>.</video><p class="video-caption">Silent screen recording &middot; Test account and profile &middot; Minecraft itself is not launched in this tour</p></section>
-<section id="download" class="section-wrap download-section" aria-labelledby="download-heading"><div class="section-heading"><div><p class="eyebrow">GET FLICK / 0.6.0</p><h2 id="download-heading">Choose your way in.</h2></div><p>Development preview released October 19, 2026. Both downloads use the same launcher.</p></div><div class="download-grid"><article><span class="label coral">RECOMMENDED</span><h3>Windows Installer</h3><p>Install Flick, create shortcuts and use the setup wizard for future updates.</p><a class="button primary" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.6.0/Flick-Launcher-Setup.exe">Download Installer &#8599;</a><small>Windows x64 &middot; Unsigned EXE</small></article><article><span class="label">NO INSTALLATION</span><h3>Portable EXE</h3><p>Run without a setup wizard. Game data lives separately in your Windows application-data folder.</p><a class="button outline" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.6.0/Flick-Launcher-Portable.exe">Download Portable &#8599;</a><small>Keep the EXE in a fixed place if you enable autostart</small></article></div><p class="compatibility-note">Modern Windows x64. Windows 7 is not supported. Minecraft and Java have their own system requirements. Microsoft sign-in is unavailable in the default preview while application access and account testing remain pending.</p></section>
-<section id="release-notes" class="section-wrap release-section" aria-labelledby="release-heading"><div><p class="eyebrow">WHAT'S NEW</p><h2 id="release-heading">A calmer workspace.<br>A safer way to experiment.</h2><p>0.6.0 &middot; October 19, 2026</p><a class="text-link" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/tag/v0.6.0">Full release notes &#8599;</a></div><ul class="release-list"><li><strong>A shorter path to Play</strong><span>Compact home, consistent icons and settings grouped into five tabs.</span></li><li><strong>A proper opening</strong><span>A four-second intro with skip, duration and reduced-motion controls.</span></li><li><strong>Bring it over. Keep a way back.</strong><span>Folder import, profile cloning, restorable backups and recovery copies before content updates.</span></li><li><strong>Updates and clearer support</strong><span>Verified launcher downloads, compatible add-on checks and locally exported diagnostic reports.</span></li></ul></section>
+<section id="download" class="section-wrap download-section" aria-labelledby="download-heading"><div class="section-heading"><div><p class="eyebrow">GET FLICK / 0.6.1</p><h2 id="download-heading">Choose your way in.</h2></div><p>Development preview released October 19, 2026. Both downloads use the same launcher.</p></div><div class="download-grid"><article><span class="label coral">RECOMMENDED</span><h3>Windows Installer</h3><p>Install Flick, create shortcuts and use the setup wizard for future updates.</p><a class="button primary" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.6.1/Flick-Launcher-Setup.exe">Download Installer &#8599;</a><small>Windows x64 &middot; Unsigned EXE</small></article><article><span class="label">NO INSTALLATION</span><h3>Portable EXE</h3><p>Run without a setup wizard. Game data lives separately in your Windows application-data folder.</p><a class="button outline" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.6.1/Flick-Launcher-Portable.exe">Download Portable &#8599;</a><small>Keep the EXE in a fixed place if you enable autostart</small></article></div><p class="compatibility-note">Modern Windows x64. Windows 7 is not supported. Minecraft and Java have their own system requirements. Microsoft sign-in is unavailable in the default preview while application access and account testing remain pending.</p></section>
+<section id="release-notes" class="section-wrap release-section" aria-labelledby="release-heading"><div><p class="eyebrow">WHAT'S NEW</p><h2 id="release-heading">A calmer workspace.<br>A safer way to experiment.</h2><p>Latest: 0.6.1 &middot; October 19, 2026</p><a class="text-link" href="changelog.html">Full release notes &#8599;</a></div><ul class="release-list"><li><strong>New in 0.6.1: a clearer console</strong><span>Clear session history, copy filtered messages and choose whether to follow new output. Read the complete launcher changelog for every version.</span></li><li><strong>A shorter path to Play</strong><span>Compact home, consistent icons and settings grouped into five tabs.</span></li><li><strong>A proper opening</strong><span>A four-second intro with skip, duration and reduced-motion controls.</span></li><li><strong>Bring it over. Keep a way back.</strong><span>Folder import, profile cloning, restorable backups and recovery copies before content updates.</span></li><li><strong>Updates and clearer support</strong><span>Verified launcher downloads, compatible add-on checks and locally exported diagnostic reports.</span></li></ul></section>
       <section
         class="development section-wrap"
         id="development"
@@ -241,7 +241,7 @@
             <summary>Can I download it yet?<span>＋</span></summary>
             <p>
               Yes. The Windows x64 development preview is available from the project's
-              <a href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/tag/v0.6.0"
+              <a href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/tag/v0.6.1"
                 >GitHub release</a
               >. Choose Setup to install or Portable to run without installation. Both builds are
               unsigned and remain an early preview. Windows 7 is not supported by this build.
@@ -302,7 +302,7 @@
             >
           </div>
           <div class="project-meta">
-            <span>Version 0.6.0</span><span>Java Edition</span><span>Development preview</span>
+            <span>Version 0.6.1</span><span>Java Edition</span><span>Development preview</span>
           </div>
         </div>
       </section>
@@ -315,7 +315,7 @@
           ></a
         >
         <div>
-          <a href="https://discord.gg/nEhCu8DY2R">Discord support &#8599;</a><a href="privacy.html">Privacy</a
+          <a href="https://discord.gg/nEhCu8DY2R">Discord support &#8599;</a><a href="changelog.html">Changelog</a><a href="privacy.html">Privacy</a
           ><a
             href="https://www.minecraft.net/usage-guidelines"
             rel="noopener noreferrer"
