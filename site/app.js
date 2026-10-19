@@ -20,22 +20,22 @@ document.addEventListener("keydown", (event) => {
   }
 });
 const shots = {
-  wardrobe:{image:"assets/launcher-wardrobe.png",caption:"Wardrobe — Flick Launcher 0.5.0",description:"Your skin in 3D, a library on your PC and cape options for the selected account."},
-  servers:{image:"assets/launcher-servers.png",caption:"Servers — Flick Launcher 0.5.2",description:"Real server logos, Minecraft-coloured MOTD and current player counts. Save favourites and add servers to a profile."},
+  wardrobe:{image:"assets/launcher-wardrobe.png",caption:"Wardrobe — Flick Launcher 0.6.0",description:"Your skin in 3D, a library on your PC and cape options for the selected account."},
+  servers:{image:"assets/launcher-servers.png",caption:"Servers — Flick Launcher 0.6.0",description:"Real server logos, Minecraft-coloured MOTD and current player counts. Save favourites and add servers to a profile."},
   play: {
     image: "assets/launcher-home.png",
-    caption: "Play — Flick Launcher development build",
+    caption: "Play — Flick Launcher 0.6.0",
     description: "Your selected profile, version and next adventure, one click away.",
   },
   library: {
     image: "assets/launcher-library.png",
-    caption: "Your library — Flick Launcher development build",
+    caption: "Your library — Flick Launcher 0.6.0",
     description:
       "Separate profiles, independent worlds, and the add-ons inside your selected adventure.",
   },
   discover: {
     image: "assets/launcher-discover.png",
-    caption: "Discover — Flick Launcher 0.5.2",
+    caption: "Discover — Flick Launcher 0.6.0",
     description:
       "Actual Modrinth results, filtered for your profile, with installation from the launcher.",
   },

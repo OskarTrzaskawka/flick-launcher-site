@@ -33,13 +33,13 @@ The script commits staged website changes, pushes `main`, and updates `gh-pages`
 
 An optional manual GitHub Actions workflow is included. If switching to it, first select **GitHub Actions** as the Pages source, then run **Deploy GitHub Pages** from the Actions tab. It uploads only `site/` and uses GitHub's temporary token and Pages OIDC permissions. The default branch deployment does not require running that workflow.
 
-All local asset links are relative so the website works under a repository subpath. The website links to the Windows x64 0.5.2 development-preview release on GitHub. Both builds are unsigned. Keep download links pinned to a published release and do not claim untested operating-system compatibility.
+All local asset links are relative so the website works under a repository subpath. The website links to the Windows x64 0.6.0 development-preview release on GitHub. Both builds are unsigned. Keep download links pinned to a published release and do not claim untested operating-system compatibility.
 
 After publishing, use the real `https://<account>.github.io/<repository>/` URL in the Minecraft application-review form. A website does not guarantee approval.
 
 ## Content and privacy
 
-Screenshots are real captures: Discover and Servers from packaged 0.5.2, and the remaining views from the 0.5.0 development build with test profiles. Profile types illustrated in the feature section are explicitly labelled as illustrations. No customer claims, performance benchmarks or Microsoft approval are implied. The site has no forms, analytics, ads or tracking cookies. Only the animation preference is saved in local storage. Hosting infrastructure is subject to GitHub's own policies.
+Screenshots and the silent workflow video are real captures of Flick 0.6.0 with test profiles. No customer claims, performance benchmarks or Microsoft approval are implied. The website has no forms, analytics, ads or tracking cookies; only its animation preference is saved locally.
 
 See `site/privacy.html` for visitor-facing information. Update the content when the launcher changes.
 
@@ -59,3 +59,6 @@ The current app captures include a Minecraft 1.21.5 screenshot owned by Mojang S
 This public repository contains the promotional website, website tooling and desktop release binaries. Desktop application sources, account data, tokens and configuration are not published here. First-party material in the new version is proprietary; third-party notices are retained, and licenses of older versions are not revoked. Public website assets and distributed binaries remain technically accessible to recipients. No claim of protection against extraction or reverse engineering is made.
 
 Support, suggestions and enquiries about optional development donations: https://discord.gg/nEhCu8DY2R . Version 0.5.1 adds the same support entry to the desktop app.
+
+## 0.6 workspace refresh
+The website now includes Installer/Portable choices, release notes, account/recovery help and a local WebM recording of profile setup, real Sodium installation and backup. The recording does not show Minecraft gameplay. No analytics or live-player counters were added. Desktop update downloads are verified and handed to the interactive installer; Microsoft access and unattended replacement are not claimed.

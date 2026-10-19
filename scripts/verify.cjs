@@ -27,6 +27,11 @@ const assert = require("node:assert/strict");
     });
     await page.goto(origin + "/flick-launcher-site/", { waitUntil: "networkidle" });
     await page.screenshot({ path: path.join(out, "desktop.png"), fullPage: true });
+    await page.screenshot({path:path.join(out,"hero.png")});
+    await page.locator("video").evaluate(v=>{v.preload="metadata";v.load();});
+    await page.waitForFunction(()=>document.querySelector("video").readyState>=1);
+    const media=await page.locator("video").evaluate(v=>({duration:v.duration,width:v.videoWidth,height:v.videoHeight,error:v.error?.message}));
+    assert.ok(media.duration>5 && media.width>0 && !media.error);
     assert.equal(await page.title(), "Flick Launcher — Your next world awaits.");
     assert.equal(await page.locator("h1").count(), 1);
     assert.equal(
@@ -107,6 +112,7 @@ const assert = require("node:assert/strict");
         "mobile navigation",
         "privacy page",
         "no third-party requests",
+        "actual local demo video decodes",
       ],
     };
     await fs.writeFile(path.join(out, "qa-result.json"), JSON.stringify(result, null, 2));

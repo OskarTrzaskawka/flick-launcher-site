@@ -22,7 +22,7 @@
     <meta property="og:url" content="https://oskartrzaskawka.github.io/flick-launcher-site/" />
     <title>Flick Launcher — Your next world awaits.</title>
     <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="workspace.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -42,9 +42,9 @@
           Menu <span>＋</span>
         </button>
         <nav id="navigation" aria-label="Main navigation">
-          <a href="#features">The launcher</a><a href="#wardrobe">Your identity</a><a href="#inside">A closer look</a
-          ><a href="#development">Development</a><a href="#faq">FAQ</a
-          ><a class="nav-cta" href="#project">Project details <span>↗</span></a>
+          <a href="#features">The launcher</a><a href="#inside">A closer look</a
+          ><a href="#release-notes">What's new</a><a href="#faq">FAQ</a
+          ><a class="nav-cta" href="#download">Download <span>↗</span></a>
         </nav>
       </div>
     </header>
@@ -54,24 +54,19 @@
         <div class="hero-copy">
           <a class="status-pill" href="#development"
             ><span class="status-dot"></span> IN DEVELOPMENT
-            <span class="pill-version">PREVIEW 0.5.2</span><span>↗</span></a
+            <span class="pill-version">PREVIEW 0.6.0</span><span>↗</span></a
           >
           <p class="eyebrow">AN INDEPENDENT JAVA EDITION LAUNCHER</p>
           <h1 id="hero-heading">Your Minecraft.<br />Your <span>own space.</span></h1>
-          <p class="hero-description">
-            Build your profiles, find your next server and make your character your own.<br />A desktop home for the way you play.
-          </p>
+          <p class="hero-description">A home for your worlds, mods and next adventure. Keep each setup separate, and get back to playing.</p>
           <div class="hero-actions">
             <a
               class="button primary"
-              href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.5.2/Flick-Launcher-Setup.exe"
+              href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.6.0/Flick-Launcher-Setup.exe"
               >Download for Windows <span>&#8599;</span></a
-            ><a class="text-link" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.5.2/Flick-Launcher-Portable.exe">Get Portable <span>↗</span></a>
+            ><a class="text-link" href="#demo">Watch it in action <span>&#9655;</span></a>
           </div>
-          <p class="hero-footnote">
-            Built for Windows. Made for Java Edition.<br />Independent software. Not affiliated with
-            Mojang or Microsoft.
-          </p>
+          <p class="hero-footnote">v0.6.0 &middot; October 19, 2026 &middot; Windows x64<br><a href="#download">Installer or Portable</a> &middot; English interface &middot; Unsigned preview</p>
         </div>
         <div class="hero-visual">
           <div class="visual-glow"></div>
@@ -84,7 +79,7 @@
             <button
               class="image-button"
               data-image="assets/launcher-home.png"
-              data-caption="Play — Flick Launcher 0.5.0 development build"
+              data-caption="Play — Flick Launcher 0.6.0 development build"
               aria-label="Enlarge the launcher screenshot"
             >
               <img
@@ -99,7 +94,7 @@
           </div>
           <div class="image-caption">
             <span><i class="status-dot"></i> YOUR NEXT SESSION STARTS HERE</span
-            ><span>Flick Launcher / 0.5.0</span>
+            ><span>Flick Launcher / 0.6.0</span>
           </div>
         </div>
       </section>
@@ -109,72 +104,7 @@
         <div class="strip-item"><span>02</span> Find your next favourite mod.</div>
         <div class="strip-item"><span>03</span> Get back to playing.</div>
       </div>
-      <section class="features section-wrap" id="features" aria-labelledby="features-heading">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">01 / YOUR GAME, YOUR WAY</p>
-            <h2 id="features-heading">Room for every<br />kind of adventure.</h2>
-          </div>
-          <p>
-            Vanilla evenings. Modded weekends. That survival world you always come back to. Keep
-            them together, without mixing them up.
-          </p>
-        </div>
-        <div class="feature-layout">
-          <article class="feature-main">
-            <div class="feature-number">01 — PROFILES</div>
-            <h3>Different worlds.<br />Their own space.</h3>
-            <p>
-              Each profile keeps its own worlds, mods and settings. Switch between a clean Vanilla
-              game and your next modded adventure.
-            </p>
-            <div class="profile-stack" aria-label="Example profile types">
-              <div>
-                <span class="cube-icon">▧</span
-                ><span>Vanilla<strong>The original adventure.</strong></span
-                ><small>JAVA EDITION</small>
-              </div>
-              <div>
-                <span class="cube-icon fabric">◇</span
-                ><span>Modded<strong>A few more possibilities.</strong></span
-                ><small>YOUR CHOICE</small>
-              </div>
-            </div>
-            <span class="card-note"
-              >Profile types illustrated above. Actual app screenshots below.</span
-            >
-          </article>
-          <div class="feature-side">
-            <article>
-              <span class="feature-number">02 — DISCOVERY</span><span class="feature-icon">⌘</span>
-              <h3>A bigger sandbox.</h3>
-              <p>
-                Browse Modrinth for compatible mods, resource packs, shaders and modpacks. Install
-                required mod dependencies along the way.
-              </p>
-              <a href="#inside" class="text-link">See discovery <span>↗</span></a>
-            </article>
-            <article>
-              <span class="feature-number">03 — THE BORING BITS</span
-              ><span class="feature-icon">↓</span>
-              <h3>Let Flick handle the setup.</h3>
-              <p>
-                Download the Java runtime matched to your game version, keep an eye on installation
-                progress, and verify supported downloads.
-              </p>
-            </article>
-          </div>
-        </div>
-        <div class="loader-line">
-          <span>A CHOICE OF LOADERS</span>
-          <p>Vanilla <i>·</i> Fabric <i>·</i> Forge <i>·</i> NeoForge <i>·</i> Quilt</p>
-          <small>Startup tested on Minecraft 1.21.1. Compatibility varies by version.</small>
-        </div>
-      </section>
-      <section id="wardrobe" class="identity-section section-wrap" aria-labelledby="identity-heading">
-        <div class="identity-copy"><p class="eyebrow">YOUR CHARACTER. YOUR COMMUNITY.</p><h2 id="identity-heading">Look like you.<br />Find your people.</h2><p>A favourite skin, a new server, a world worth returning to. Bring the parts of Minecraft that matter to you into one place.</p><div class="identity-points"><article><span>01</span><div><h3>A wardrobe of your own</h3><p>Rotate your character in 3D, import PNG skins and build a collection on your PC. Microsoft capes come from the account's owned collection.</p></div></article><article><span>02</span><div><h3>Somewhere new to play</h3><p>Browse Polish and worldwide server directories, save favourites and add an address to your selected Minecraft profile.</p></div></article><article><span>03</span><div><h3>There when you need it</h3><p>Keep Flick in the Windows tray, choose what the X button does, and opt into starting with Windows.</p></div></article></div><p class="identity-note">Local skins in game need a compatible skin mod. Microsoft appearance changes require configured Minecraft account access.</p></div>
-        <div class="identity-visual"><button class="image-button" data-image="assets/launcher-wardrobe.png" data-caption="Wardrobe — Flick Launcher 0.5.0" aria-label="Enlarge Wardrobe screenshot"><img src="assets/launcher-wardrobe.png" width="1980" height="1293" loading="lazy" alt="Flick Wardrobe with an interactive Minecraft character and local skin library"></button><div class="identity-stamp"><img src="assets/mark.svg" width="25" height="25" alt=""><span>Made for your<br><strong>next adventure.</strong></span></div></div>
-      </section>
+<section id="features" class="section-wrap features" aria-labelledby="features-heading"><div class="section-heading"><div><p class="eyebrow">MADE FOR YOUR DESKTOP</p><h2 id="features-heading">A setup worth<br>coming back to.</h2></div><p>Keep a survival world, a modded weekend and a clean Vanilla install together, with their files kept apart.</p></div><div class="benefit-grid"><article><span class="feature-number">01 / YOUR WORLDS</span><h3>Bring your setup.</h3><p>Create a profile, import an existing game folder or bring over a Prism instance. Clone a setup before trying something new.</p><small>Vanilla &middot; Fabric &middot; Forge &middot; NeoForge &middot; Quilt</small></article><article><span class="feature-number">02 / YOUR MODS</span><h3>Find your next favourite.</h3><p>Browse Modrinth, install compatible add-ons and check tracked content for updates. Restorable backups give you a way back.</p><small>Mods &middot; Modpacks &middot; Shaders &middot; Resource packs</small></article><article id="wardrobe"><span class="feature-number">03 / YOUR IDENTITY</span><h3>Make it yours.</h3><p>Preview skins in 3D, build a local collection and browse Polish or worldwide servers with logos and coloured MOTD.</p><small>Wardrobe &middot; Favourites &middot; Discord activity</small></article></div></section>
       <section id="inside" class="inside section-wrap" aria-labelledby="inside-heading">
         <div class="section-heading">
           <div>
@@ -239,6 +169,9 @@
           </div>
         </div>
       </section>
+<section id="demo" class="section-wrap demo-section" aria-labelledby="demo-heading"><div class="section-heading"><div><p class="eyebrow">FROM AN EMPTY LIBRARY TO READY</p><h2 id="demo-heading">See the real workflow.</h2></div><p>A recording of the desktop application: create a profile, install Sodium from Modrinth and make a backup.</p></div><video controls playsinline preload="none" poster="assets/launcher-home.png" aria-label="Flick Launcher setup demonstration"><source src="assets/launcher-tour.webm" type="video/webm">Your browser cannot play this recording. <a href="assets/launcher-tour.webm">Download the video</a>.</video><p class="video-caption">Silent screen recording &middot; Test account and profile &middot; Minecraft itself is not launched in this tour</p></section>
+<section id="download" class="section-wrap download-section" aria-labelledby="download-heading"><div class="section-heading"><div><p class="eyebrow">GET FLICK / 0.6.0</p><h2 id="download-heading">Choose your way in.</h2></div><p>Development preview released October 19, 2026. Both downloads use the same launcher.</p></div><div class="download-grid"><article><span class="label coral">RECOMMENDED</span><h3>Windows Installer</h3><p>Install Flick, create shortcuts and use the setup wizard for future updates.</p><a class="button primary" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.6.0/Flick-Launcher-Setup.exe">Download Installer &#8599;</a><small>Windows x64 &middot; Unsigned EXE</small></article><article><span class="label">NO INSTALLATION</span><h3>Portable EXE</h3><p>Run without a setup wizard. Game data lives separately in your Windows application-data folder.</p><a class="button outline" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.6.0/Flick-Launcher-Portable.exe">Download Portable &#8599;</a><small>Keep the EXE in a fixed place if you enable autostart</small></article></div><p class="compatibility-note">Modern Windows x64. Windows 7 is not supported. Minecraft and Java have their own system requirements. Microsoft sign-in is unavailable in the default preview while application access and account testing remain pending.</p></section>
+<section id="release-notes" class="section-wrap release-section" aria-labelledby="release-heading"><div><p class="eyebrow">WHAT'S NEW</p><h2 id="release-heading">A calmer workspace.<br>A safer way to experiment.</h2><p>0.6.0 &middot; October 19, 2026</p><a class="text-link" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/tag/v0.6.0">Full release notes &#8599;</a></div><ul class="release-list"><li><strong>A shorter path to Play</strong><span>Compact home, consistent icons and settings grouped into five tabs.</span></li><li><strong>A proper opening</strong><span>A four-second intro with skip, duration and reduced-motion controls.</span></li><li><strong>Bring it over. Keep a way back.</strong><span>Folder import, profile cloning, restorable backups and recovery copies before content updates.</span></li><li><strong>Updates and clearer support</strong><span>Verified launcher downloads, compatible add-on checks and locally exported diagnostic reports.</span></li></ul></section>
       <section
         class="development section-wrap"
         id="development"
@@ -259,11 +192,11 @@
             <span class="label green">IN THE CURRENT PREVIEW</span>
             <h3>The foundations are here.</h3>
             <ul>
-              <li>Isolated profiles and local player accounts</li>
+              <li>Isolated profiles, folder import, cloning and local player accounts</li>
               <li>Releases and recent snapshots from Minecraft 1.13 onward</li>
               <li>Automatic Java installation on Windows x64</li>
               <li>Modrinth discovery and individual add-on installation</li>
-              <li>Modrinth modpack imports and world backups</li>
+              <li>Tracked Modrinth updates, profile backups and restore</li><li>Launcher update checks and SHA-256 verified downloads</li>
               <li>Discord activity with game version, session time and privacy controls</li><li>3D Wardrobe, local skin library and owned Microsoft capes</li><li>Polish and worldwide servers with real icons, coloured MOTD and saved favourites</li><li>Windows tray, optional autostart and configurable close behaviour</li><li>File names, transferred KB/MB and filtered session logs</li>
               <li>Startup checks for Vanilla and four mod loaders on 1.21.1</li>
             </ul>
@@ -276,8 +209,8 @@
               <li>Historical versions, including Alpha and Beta</li>
               <li>Broader compatibility testing across Windows versions</li>
               <li>Lower memory use, measured on real devices</li>
-              <li>Refined artwork, modpack updates and easier recovery</li>
-              <li>A public release and automatic launcher updates</li>
+              <li>Broader testing of modpack migration and configuration merging</li>
+              <li>Unattended launcher replacement and broader release testing</li>
             </ul>
           </article>
         </div>
@@ -295,7 +228,7 @@
           <p class="eyebrow">04 / A FEW GOOD QUESTIONS</p>
           <h2 id="faq-heading">Before your<br />next adventure.</h2>
         </div>
-        <div class="faq-list">
+        <div class="faq-list"><details><summary>Why does a local account get Invalid session?<span>+</span></summary><p>Local accounts have no Microsoft session. Some servers accept local players; others require Microsoft authentication, sometimes for specific names. Settings &rarr; Advanced &rarr; Check server connection explains reported status without joining a world.</p></details><details><summary>How do I restore a backup?<span>+</span></summary><p>Open Library &rarr; Backups on the profile and select Restore. A safety copy is created first. Tracked modpack updates install into a new profile with copied worlds and basic options; your original configuration remains available.</p></details><details><summary>How do I report a crash?<span>+</span></summary><p>Check Console, then export a report from Settings &rarr; Advanced. Known account credentials, player names and local user paths are removed. Review the report before sharing it on Discord.</p></details>
           <details open>
             <summary>Is this an official Minecraft launcher?<span>＋</span></summary>
             <p>
@@ -308,7 +241,7 @@
             <summary>Can I download it yet?<span>＋</span></summary>
             <p>
               Yes. The Windows x64 development preview is available from the project's
-              <a href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/tag/v0.5.2"
+              <a href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/tag/v0.6.0"
                 >GitHub release</a
               >. Choose Setup to install or Portable to run without installation. Both builds are
               unsigned and remain an early preview. Windows 7 is not supported by this build.
@@ -369,7 +302,7 @@
             >
           </div>
           <div class="project-meta">
-            <span>Version 0.5.2</span><span>Java Edition</span><span>Development preview</span>
+            <span>Version 0.6.0</span><span>Java Edition</span><span>Development preview</span>
           </div>
         </div>
       </section>
