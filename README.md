@@ -33,7 +33,7 @@ The script commits staged website changes, pushes `main`, and updates `gh-pages`
 
 An optional manual GitHub Actions workflow is included. If switching to it, first select **GitHub Actions** as the Pages source, then run **Deploy GitHub Pages** from the Actions tab. It uploads only `site/` and uses GitHub's temporary token and Pages OIDC permissions. The default branch deployment does not require running that workflow.
 
-All local asset links are relative so the website works under a repository subpath. The website contains no installer download until an actual public release is available. Do not add a fake download URL or claim untested operating-system compatibility.
+All local asset links are relative so the website works under a repository subpath. The website links to the Windows x64 0.3.0 development-preview release on GitHub. Both builds are unsigned. Keep download links pinned to a published release and do not claim untested operating-system compatibility.
 
 After publishing, use the real `https://<account>.github.io/<repository>/` URL in the Minecraft application-review form. A website does not guarantee approval.
 
@@ -52,3 +52,5 @@ Website code: MIT, see `LICENSE`. Poppins fonts: SIL Open Font License 1.1; orig
 Website: https://oskartrzaskawka.github.io/flick-launcher-site/
 
 Repository: https://github.com/OskarTrzaskawka/flick-launcher-site
+
+The current app captures include a Minecraft 1.21.5 screenshot owned by Mojang Studios/Microsoft. Source: https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-5 . No affiliation or endorsement is implied.
