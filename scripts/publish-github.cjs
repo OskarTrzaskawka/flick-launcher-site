@@ -17,9 +17,7 @@ function git(args) {
     );
   return r.stdout.trim();
 }
-async function main() {
-  const credential = git(["credential", "fill"]);
-}
+
 async function publish() {
   const r = spawnSync("git", ["credential", "fill"], {
     cwd: directory,
