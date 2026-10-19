@@ -100,13 +100,13 @@ fetch("config.json")
   .then((config) => {
     for (const [selector, url] of [
       ["[data-project-link]", config.repository],
-      ["[data-contact-link]", config.issues],
+      ["[data-contact-link]", config.discord],
     ]) {
-      if (typeof url === "string" && /^https:\/\/github\.com\/[^/]+\/[^/]+/.test(url)) {
+      if (typeof url === "string" && (url.startsWith("https://github.com/") || url === "https://discord.gg/nEhCu8DY2R")) {
         const a = document.querySelector(selector);
         a.href = url;
         a.innerHTML = selector.includes("contact")
-          ? "Questions & feedback <span>↗</span>"
+          ? "Join our Discord <span>↗</span>"
           : "View project on GitHub <span>↗</span>";
         a.rel = "noopener noreferrer";
       }

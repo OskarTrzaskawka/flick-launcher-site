@@ -57,3 +57,5 @@ The current app captures include a Minecraft 1.21.5 screenshot owned by Mojang S
 
 ## 0.5 preview and source policy
 This public repository contains the promotional website, website tooling and desktop release binaries. Desktop application sources, account data, tokens and configuration are not published here. First-party material in the new version is proprietary; third-party notices are retained, and licenses of older versions are not revoked. Public website assets and distributed binaries remain technically accessible to recipients. No claim of protection against extraction or reverse engineering is made.
+
+Support, suggestions and enquiries about optional development donations: https://discord.gg/nEhCu8DY2R . Version 0.5.1 adds the same support entry to the desktop app.

@@ -33,6 +33,9 @@ const assert = require("node:assert/strict");
       await page.locator("[data-project-link]").getAttribute("href"),
       "https://github.com/OskarTrzaskawka/flick-launcher-site",
     );
+    assert.equal(await page.locator("[data-contact-link]").getAttribute("href"), "https://discord.gg/nEhCu8DY2R");
+    assert.match(await page.locator("#project").innerText(), /optional donation/);
+    assert.match(await page.locator("[data-contact-link]").innerText(), /Join our Discord/);
     const anchors = await page
       .locator('a[href^="#"]')
       .evaluateAll((links) => links.map((a) => a.getAttribute("href")).filter((a) => a.length > 1));
