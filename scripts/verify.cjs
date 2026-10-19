@@ -32,6 +32,8 @@ const assert = require("node:assert/strict");
     await page.waitForFunction(()=>document.querySelector("video").readyState>=1);
     const media=await page.locator("video").evaluate(v=>({duration:v.duration,width:v.videoWidth,height:v.videoHeight,error:v.error?.message}));
     assert.ok(media.duration>5 && media.width>0 && !media.error);
+    await page.locator("video").evaluate(async v=>{v.currentTime=v.duration/2;await new Promise(resolve=>v.addEventListener("seeked",resolve,{once:true}));});
+    assert.ok(await page.locator("video").evaluate(v=>v.currentTime>1));
     assert.equal(await page.title(), "Flick Launcher — Your next world awaits.");
     assert.equal(await page.locator("h1").count(), 1);
     assert.equal(

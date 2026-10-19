@@ -25,8 +25,16 @@ function start(port = 4174) {
           ".svg": "image/svg+xml",
           ".ttf": "font/ttf",
           ".txt": "text/plain; charset=utf-8",
+          ".webm": "video/webm",
         }[path.extname(file)] || "application/octet-stream";
-      res.writeHead(200, { "Content-Type": type });
+      if(req.headers.range){
+        const match=/^bytes=(\d*)-(\d*)$/.exec(req.headers.range);
+        let start=match?.[1]?Number(match[1]):0,end=match?.[2]?Number(match[2]):bytes.length-1;
+        if(match&&!match[1]&&match[2]){start=Math.max(0,bytes.length-Number(match[2]));end=bytes.length-1;}
+        if(!match||start>end||start>=bytes.length){res.writeHead(416,{'Content-Range':`bytes */${bytes.length}`});return res.end();}
+        end=Math.min(end,bytes.length-1);res.writeHead(206,{'Content-Type':type,'Accept-Ranges':'bytes','Content-Range':`bytes ${start}-${end}/${bytes.length}`,'Content-Length':end-start+1});return res.end(bytes.subarray(start,end+1));
+      }
+      res.writeHead(200, { "Content-Type": type, "Content-Length":bytes.length, "Accept-Ranges":"bytes" });
       res.end(bytes);
     } catch {
       res.writeHead(404);
