@@ -42,7 +42,7 @@
           Menu <span>＋</span>
         </button>
         <nav id="navigation" aria-label="Main navigation">
-          <a href="#features">The launcher</a><a href="#inside">A closer look</a
+          <a href="#features">The launcher</a><a href="#wardrobe">Your identity</a><a href="#inside">A closer look</a
           ><a href="#development">Development</a><a href="#faq">FAQ</a
           ><a class="nav-cta" href="#project">Project details <span>↗</span></a>
         </nav>
@@ -54,20 +54,19 @@
         <div class="hero-copy">
           <a class="status-pill" href="#development"
             ><span class="status-dot"></span> IN DEVELOPMENT
-            <span class="pill-version">PREVIEW 0.4.0</span><span>↗</span></a
+            <span class="pill-version">PREVIEW 0.5.0</span><span>↗</span></a
           >
           <p class="eyebrow">AN INDEPENDENT JAVA EDITION LAUNCHER</p>
-          <h1 id="hero-heading">Less setup.<br />More <span>Minecraft.</span></h1>
+          <h1 id="hero-heading">Your Minecraft.<br />Your <span>own space.</span></h1>
           <p class="hero-description">
-            A place for every world. A profile for every adventure.<br />Meet a calmer way to make
-            Minecraft your own.
+            Build your profiles, find your next server and make your character your own.<br />A desktop home for the way you play.
           </p>
           <div class="hero-actions">
             <a
               class="button primary"
-              href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.4.0/Flick-Launcher-Setup.exe"
+              href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.5.0/Flick-Launcher-Setup.exe"
               >Download for Windows <span>&#8599;</span></a
-            ><a class="text-link" href="#project">About the project <span>↓</span></a>
+            ><a class="text-link" href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/download/v0.5.0/Flick-Launcher-Portable.exe">Get Portable <span>↗</span></a>
           </div>
           <p class="hero-footnote">
             Built for Windows. Made for Java Edition.<br />Independent software. Not affiliated with
@@ -85,7 +84,7 @@
             <button
               class="image-button"
               data-image="assets/launcher-home.png"
-              data-caption="Play — Flick Launcher 0.4.0 development build"
+              data-caption="Play — Flick Launcher 0.5.0 development build"
               aria-label="Enlarge the launcher screenshot"
             >
               <img
@@ -99,8 +98,8 @@
             </button>
           </div>
           <div class="image-caption">
-            <span><i class="status-dot"></i> THE ACTUAL APP, NOT A MOCKUP</span
-            ><span>Flick Launcher / 0.4.0</span>
+            <span><i class="status-dot"></i> YOUR NEXT SESSION STARTS HERE</span
+            ><span>Flick Launcher / 0.5.0</span>
           </div>
         </div>
       </section>
@@ -172,6 +171,10 @@
           <small>Startup tested on Minecraft 1.21.1. Compatibility varies by version.</small>
         </div>
       </section>
+      <section id="wardrobe" class="identity-section section-wrap" aria-labelledby="identity-heading">
+        <div class="identity-copy"><p class="eyebrow">YOUR CHARACTER. YOUR COMMUNITY.</p><h2 id="identity-heading">Look like you.<br />Find your people.</h2><p>A favourite skin, a new server, a world worth returning to. Bring the parts of Minecraft that matter to you into one place.</p><div class="identity-points"><article><span>01</span><div><h3>A wardrobe of your own</h3><p>Rotate your character in 3D, import PNG skins and build a collection on your PC. Microsoft capes come from the account's owned collection.</p></div></article><article><span>02</span><div><h3>Somewhere new to play</h3><p>Browse Polish and worldwide server directories, save favourites and add an address to your selected Minecraft profile.</p></div></article><article><span>03</span><div><h3>There when you need it</h3><p>Keep Flick in the Windows tray, choose what the X button does, and opt into starting with Windows.</p></div></article></div><p class="identity-note">Local skins in game need a compatible skin mod. Microsoft appearance changes require configured Minecraft account access.</p></div>
+        <div class="identity-visual"><button class="image-button" data-image="assets/launcher-wardrobe.png" data-caption="Wardrobe — Flick Launcher 0.5.0" aria-label="Enlarge Wardrobe screenshot"><img src="assets/launcher-wardrobe.png" width="1980" height="1293" loading="lazy" alt="Flick Wardrobe with an interactive Minecraft character and local skin library"></button><div class="identity-stamp"><img src="assets/mark.svg" width="25" height="25" alt=""><span>Made for your<br><strong>next adventure.</strong></span></div></div>
+      </section>
       <section id="inside" class="inside section-wrap" aria-labelledby="inside-heading">
         <div class="section-heading">
           <div>
@@ -179,8 +182,7 @@
             <h2 id="inside-heading">A familiar game.<br />A fresh place to start.</h2>
           </div>
           <p>
-            Real captures from the current development build. No invented dashboards, no made-up
-            download counts.
+            Take a closer look at profiles, content discovery, your character and the communities waiting in Minecraft.
           </p>
         </div>
         <div class="gallery-tabs" role="tablist" aria-label="Launcher screenshots">
@@ -210,7 +212,7 @@
             tabindex="-1"
           >
             03 <span>Discover</span>
-          </button>
+          </button><button role="tab" id="tab-wardrobe" aria-selected="false" aria-controls="screenshot-panel" data-shot="wardrobe" tabindex="-1">04 <span>Wardrobe</span></button><button role="tab" id="tab-servers" aria-selected="false" aria-controls="screenshot-panel" data-shot="servers" tabindex="-1">05 <span>Servers</span></button>
         </div>
         <div id="screenshot-panel" role="tabpanel" aria-labelledby="tab-play">
           <button
@@ -244,7 +246,7 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">03 / BUILT IN THE OPEN</p>
+            <p class="eyebrow">03 / DEVELOPMENT NOTES</p>
             <h2 id="development-heading">A work in progress.<br />With a clear direction.</h2>
           </div>
           <p>
@@ -262,7 +264,7 @@
               <li>Automatic Java installation on Windows x64</li>
               <li>Modrinth discovery and individual add-on installation</li>
               <li>Modrinth modpack imports and world backups</li>
-              <li>Discord activity with game version, session time and privacy controls</li>
+              <li>Discord activity with game version, session time and privacy controls</li><li>3D Wardrobe, local skin library and owned Microsoft capes</li><li>Polish and worldwide server discovery with saved favourites</li><li>Windows tray, optional autostart and configurable close behaviour</li><li>File names, transferred KB/MB and filtered session logs</li>
               <li>Startup checks for Vanilla and four mod loaders on 1.21.1</li>
             </ul>
           </article>
@@ -306,7 +308,7 @@
             <summary>Can I download it yet?<span>＋</span></summary>
             <p>
               Yes. The Windows x64 development preview is available from the project's
-              <a href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/tag/v0.4.0"
+              <a href="https://github.com/OskarTrzaskawka/flick-launcher-site/releases/tag/v0.5.0"
                 >GitHub release</a
               >. Choose Setup to install or Portable to run without installation. Both builds are
               unsigned and remain an early preview. Windows 7 is not supported by this build.
@@ -338,6 +340,7 @@
               or Java version will run on an older computer.
             </p>
           </details>
+          <details><summary>Will my local skin appear in Minecraft?<span>＋</span></summary><p>Flick can preview and store local skins and capes. To use them in game, enable CustomSkinLoader from Wardrobe in a supported modded profile. Vanilla Minecraft does not load custom offline textures automatically; other players need compatible skin support to see them.</p></details>
           <details>
             <summary>Can I install shaders and resource packs?<span>＋</span></summary>
             <p>
@@ -352,7 +355,7 @@
         <div class="project-banner">
           <img src="assets/mark.svg" width="62" height="62" alt="" />
           <p class="eyebrow">A QUIETER HOME FOR YOUR NEXT WORLD</p>
-          <h2 id="project-heading">Hello, we're Flick Launcher.</h2>
+          <h2 id="project-heading">Make room for your next world.</h2>
           <p>
             An independent Minecraft Java Edition launcher project.<br />Currently in development,
             with an English interface and a Windows desktop preview.
@@ -365,7 +368,7 @@
             >
           </div>
           <div class="project-meta">
-            <span>Version 0.4.0</span><span>Java Edition</span><span>Development preview</span>
+            <span>Version 0.5.0</span><span>Java Edition</span><span>Development preview</span>
           </div>
         </div>
       </section>

@@ -20,6 +20,8 @@ document.addEventListener("keydown", (event) => {
   }
 });
 const shots = {
+  wardrobe:{image:"assets/launcher-wardrobe.png",caption:"Wardrobe — Flick Launcher 0.5.0",description:"Your skin in 3D, a library on your PC and cape options for the selected account."},
+  servers:{image:"assets/launcher-servers.png",caption:"Servers — Flick Launcher 0.5.0",description:"Browse directories, save favourites and add servers directly to a Minecraft profile."},
   play: {
     image: "assets/launcher-home.png",
     caption: "Play — Flick Launcher development build",

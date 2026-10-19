@@ -41,6 +41,11 @@ const assert = require("node:assert/strict");
     assert.match(await page.locator("#gallery-image").getAttribute("src"), /library/);
     await page.locator("#tab-library").press("ArrowRight");
     assert.equal(await page.locator("#tab-discover").getAttribute("aria-selected"), "true");
+    for (const name of ["wardrobe", "servers"]) {
+      await page.locator("#tab-" + name).click();
+      assert.match(await page.locator("#gallery-image").getAttribute("src"), new RegExp(name));
+      await page.locator("#gallery-image").evaluate(image => image.decode());
+    }
     await page.locator("#gallery-enlarge").click();
     assert.ok(await page.locator("#lightbox").evaluate((e) => e.open));
     await page.keyboard.press("Escape");
