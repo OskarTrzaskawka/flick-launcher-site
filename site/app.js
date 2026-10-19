@@ -21,7 +21,7 @@ document.addEventListener("keydown", (event) => {
 });
 const shots = {
   wardrobe:{image:"assets/launcher-wardrobe.png",caption:"Wardrobe — Flick Launcher 0.5.0",description:"Your skin in 3D, a library on your PC and cape options for the selected account."},
-  servers:{image:"assets/launcher-servers.png",caption:"Servers — Flick Launcher 0.5.0",description:"Browse directories, save favourites and add servers directly to a Minecraft profile."},
+  servers:{image:"assets/launcher-servers.png",caption:"Servers — Flick Launcher 0.5.2",description:"Real server logos, Minecraft-coloured MOTD and current player counts. Save favourites and add servers to a profile."},
   play: {
     image: "assets/launcher-home.png",
     caption: "Play — Flick Launcher development build",
@@ -35,7 +35,7 @@ const shots = {
   },
   discover: {
     image: "assets/launcher-discover.png",
-    caption: "Discover — Flick Launcher development build",
+    caption: "Discover — Flick Launcher 0.5.2",
     description:
       "Actual Modrinth results, filtered for your profile, with installation from the launcher.",
   },
