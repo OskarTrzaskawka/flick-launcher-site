@@ -1449,3 +1449,9 @@ html.motion-paused {
 .hero-visual {
   max-width: 100%;
 }
+
+.faq-list p a {
+  color: #edb2bf;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
