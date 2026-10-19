@@ -131,9 +131,9 @@ function paint(time) {
     for (let y = 0; y < height; y += 35) {
       const wave = Math.sin((x - y) * 0.005 + time * 0.00045),
         crest = ((wave + 1) / 2) ** 14;
-      ctx.fillStyle = `rgba(255,130,149,${(0.012 + crest * 0.13) * (x / width)})`;
+      ctx.fillStyle = `rgba(255,130,149,${(0.025 + crest * 0.28) * (x / width)})`;
       ctx.beginPath();
-      ctx.arc(x, y + wave * 3, 0.6 + crest * 0.65, 0, Math.PI * 2);
+      ctx.arc(x, y + wave * 3, 0.8 + crest * 1.1, 0, Math.PI * 2);
       ctx.fill();
     }
 }

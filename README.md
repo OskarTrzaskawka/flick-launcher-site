@@ -33,7 +33,7 @@ The script commits staged website changes, pushes `main`, and updates `gh-pages`
 
 An optional manual GitHub Actions workflow is included. If switching to it, first select **GitHub Actions** as the Pages source, then run **Deploy GitHub Pages** from the Actions tab. It uploads only `site/` and uses GitHub's temporary token and Pages OIDC permissions. The default branch deployment does not require running that workflow.
 
-All local asset links are relative so the website works under a repository subpath. The website links to the Windows x64 0.6.0 development-preview release on GitHub. Both builds are unsigned. Keep download links pinned to a published release and do not claim untested operating-system compatibility.
+All local asset links are relative so the website works under a repository subpath. The website links to the Windows x64 0.6.1 development-preview release on GitHub. Both builds are unsigned. Keep download links pinned to a published release and do not claim untested operating-system compatibility.
 
 After publishing, use the real `https://<account>.github.io/<repository>/` URL in the Minecraft application-review form. A website does not guarantee approval.
 
@@ -62,3 +62,6 @@ Support, suggestions and enquiries about optional development donations: https:/
 
 ## 0.6 workspace refresh
 The website now includes Installer/Portable choices, release notes, account/recovery help and a local WebM recording of profile setup, real Sodium installation and backup. The recording does not show Minecraft gameplay. No analytics or live-player counters were added. Desktop update downloads are verified and handed to the interactive installer; Microsoft access and unattended replacement are not claimed.
+
+## Launcher history and motion
+`site/changelog-data.json` stores player-facing launcher notes only, from 0.1.0 onward. Run `node scripts/build-changelog.cjs` after editing it to rebuild the static changelog page. Keep implementation/test/website-only changes out of that history. The website links to 0.6.1; existing screenshots and the workflow recording remain clearly labelled 0.6.0. Button effects and section entrances respect reduced-motion and the saved animation preference.

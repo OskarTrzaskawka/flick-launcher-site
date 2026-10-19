@@ -1,0 +1,14 @@
+.has-bubbles{position:relative;isolation:isolate;overflow:hidden!important}
+.button-bubbles{position:absolute;inset:0;pointer-events:none;overflow:hidden;border-radius:inherit;z-index:-1}
+.button-bubbles>span{position:absolute;left:var(--bubble-x);bottom:2px;width:var(--bubble-size);height:var(--bubble-size);border-radius:50%;background:#f3b3c8;opacity:0;animation:flick-bubble .8s ease-out var(--bubble-delay) both;will-change:transform,opacity}
+.primary .button-bubbles>span{background:#fff2f6}
+.button.primary:hover,.button.outline:hover,.button.secondary:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px #f18a9b24;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.button.primary:active,.button.outline:active,.button.secondary:active{transform:translateY(0) scale(.98)}
+.reveal-arrived{animation:flick-reveal .65s cubic-bezier(.2,.8,.2,1) both}
+.benefit-grid article:nth-child(2).reveal-arrived,.download-grid article:nth-child(2).reveal-arrived{animation-delay:.08s}.benefit-grid article:nth-child(3).reveal-arrived{animation-delay:.16s}
+@keyframes flick-bubble{0%{opacity:0;transform:translate3d(0,12px,0) scale(.3)}20%{opacity:.65}100%{opacity:0;transform:translate3d(var(--bubble-drift),-48px,0) scale(1.5)}}
+@keyframes flick-reveal{from{opacity:.2;transform:translateY(18px)}to{opacity:1;transform:none}}
+html.no-motion .button-bubbles,html.motion-paused .button-bubbles{display:none}
+html.no-motion .reveal-arrived,html.motion-paused .reveal-arrived{animation:none!important}
+html.no-motion .button:hover,html.motion-paused .button:hover,html.no-motion .nav-cta:hover,html.motion-paused .nav-cta:hover{transform:none;box-shadow:none;transition:none}
+@media(prefers-reduced-motion:reduce){.button-bubbles{display:none}.reveal-arrived{animation:none!important}.button:hover,.nav-cta:hover{transform:none!important;box-shadow:none!important;transition:none!important}}

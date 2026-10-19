@@ -1,0 +1,96 @@
+[
+  {
+    "version": "0.6.1",
+    "title": "A clearer console",
+    "changes": [
+      "Clear the current console history with Clear console. New messages continue to appear, and log files stay on your computer.",
+      "Copy only the messages matching your current level and search filters with Copy visible.",
+      "Choose whether the console follows new messages with Follow output.",
+      "Open the launcher's version history from What's new in the sidebar or Settings.",
+      "Selected action buttons respond with a short bubble animation when interface animation is enabled."
+    ]
+  },
+  {
+    "version": "0.6.0",
+    "title": "Your desktop workspace",
+    "changes": [
+      "A more compact Play screen, Library and server browser, with consistent icons.",
+      "Settings are grouped into General, Minecraft, Accounts, Appearance and Advanced.",
+      "A visible opening animation with selectable duration, a skip button and reduced-motion support.",
+      "Import an existing Minecraft game folder or Prism instance, and clone profiles without changing the original.",
+      "Restore profile backups from Library. A safety copy is made before restoring.",
+      "Check compatible updates for enabled, tracked Modrinth add-ons, with a backup before changes.",
+      "Install updates to catalog-linked modpacks into a separate profile with copied worlds and basic options, keeping your original setup.",
+      "Check for launcher updates in Settings and download a verified Installer or Portable EXE. Installer updates are interactive; Portable replacement is manual.",
+      "Check reported server status, export a support report with known account details removed, and inspect launcher memory and CPU samples."
+    ]
+  },
+  {
+    "version": "0.5.2",
+    "title": "Server messages, as they should look",
+    "changes": [
+      "Fixed missing server logos and project icons in Discover.",
+      "Server MOTD preserves Minecraft colours, formatting and line breaks.",
+      "Visible server listings can refresh their icon, message and player counts."
+    ]
+  },
+  {
+    "version": "0.5.1",
+    "title": "Support, one click away",
+    "changes": [
+      "Open the Flick Discord for help, suggestions and optional development support from the sidebar or Settings."
+    ]
+  },
+  {
+    "version": "0.5.0",
+    "title": "Your character and your communities",
+    "changes": [
+      "Wardrobe adds a 3D character preview, classic and slim models, PNG skin import and export, a local collection and a community skin gallery.",
+      "Preview local capes and use appearance tools for the selected account. Microsoft appearance features require available account access.",
+      "Enable CustomSkinLoader for local skins in supported modded profiles. Other players need compatible skin support to see them.",
+      "Browse Polish and worldwide server directories, save favourites, copy addresses and add servers to your profile's Multiplayer list.",
+      "Keep Flick in the Windows tray, choose what the X button does and optionally start with Windows.",
+      "See downloaded KB/MB and file percentages in Downloads and Console."
+    ]
+  },
+  {
+    "version": "0.4.0",
+    "title": "Follow your session",
+    "changes": [
+      "A dedicated Console with INFO, WARN and ERROR filters and message search.",
+      "Download progress shows file names and the current installation stage.",
+      "Choose whether Flick stays open, minimizes or exits when Minecraft starts.",
+      "The Play screen shows the selected account, game memory and launch behaviour."
+    ]
+  },
+  {
+    "version": "0.3.0",
+    "title": "Share what you're playing",
+    "changes": [
+      "Discord activity can show Flick or the running Minecraft version, mod loader and session time, with website and download links.",
+      "Choose whether to share activity and the last detected server address on supported Minecraft versions.",
+      "Ambient animation pauses during gameplay, and hidden windows pause live output updates."
+    ]
+  },
+  {
+    "version": "0.2.0",
+    "title": "A fresh place to start",
+    "changes": [
+      "A redesigned Play screen highlights your selected profile and recent setups.",
+      "Real Minecraft artwork, clearer add-on shortcuts and refined navigation, dialogs and spacing.",
+      "An opening screen with a retry action if the local library cannot be loaded.",
+      "Animation preferences and reduced-motion support, plus cleaner navigation between screens."
+    ]
+  },
+  {
+    "version": "0.1.0",
+    "title": "The first Flick preview",
+    "changes": [
+      "Create separate Minecraft Java profiles with their own worlds, mods and settings.",
+      "Choose supported Minecraft releases and snapshots, with Vanilla, Fabric, Forge, NeoForge and Quilt profiles where available.",
+      "Automatically download the required game files and Java runtime.",
+      "Browse Modrinth add-ons, import Modrinth modpacks and back up worlds.",
+      "Use local player profiles and manage game memory from Settings."
+    ]
+  }
+]

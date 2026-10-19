@@ -26,6 +26,7 @@ const assert = require("node:assert/strict");
       if (!r.url().startsWith(origin)) external.push(r.url());
     });
     await page.goto(origin + "/flick-launcher-site/", { waitUntil: "networkidle" });
+    await page.waitForTimeout(800);
     await page.screenshot({ path: path.join(out, "desktop.png"), fullPage: true });
     await page.screenshot({path:path.join(out,"hero.png")});
     await page.locator("video").evaluate(v=>{v.preload="metadata";v.load();});
@@ -36,6 +37,11 @@ const assert = require("node:assert/strict");
     assert.ok(await page.locator("video").evaluate(v=>v.currentTime>1));
     assert.equal(await page.title(), "Flick Launcher — Your next world awaits.");
     assert.equal(await page.locator("h1").count(), 1);
+    await page.locator(".hero-actions .primary").hover();
+    await page.waitForSelector(".button-bubbles > span");
+    assert.equal(await page.locator(".button-bubbles > span").first().evaluate(e=>getComputedStyle(e).animationName),"flick-bubble");
+    await page.waitForTimeout(1200);
+    assert.equal(await page.locator(".button-bubbles").count(),0);
     assert.equal(
       await page.locator("[data-project-link]").getAttribute("href"),
       "https://github.com/OskarTrzaskawka/flick-launcher-site",
@@ -62,6 +68,8 @@ const assert = require("node:assert/strict");
     assert.equal(await page.locator("#lightbox").evaluate((e) => e.open), false);
     await page.locator("#motion-toggle").click();
     assert.equal(await page.locator("#motion-toggle").textContent(), "Resume animation");
+    await page.locator(".hero-actions .primary").hover();
+    assert.equal(await page.locator(".button-bubbles").count(),0);
     const image = await page.locator("#ambient").evaluate((e) => e.toDataURL());
     await page.waitForTimeout(180);
     assert.equal(await page.locator("#ambient").evaluate((e) => e.toDataURL()), image);
@@ -84,6 +92,15 @@ const assert = require("node:assert/strict");
     await page.goto(origin + "/flick-launcher-site/privacy.html", { waitUntil: "networkidle" });
     assert.match(await page.title(), /Privacy/);
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.goto(origin + '/flick-launcher-site/changelog.html', {waitUntil:'networkidle'});
+    assert.match(await page.title(), /Changelog/);
+    assert.equal(await page.locator('.version-entry').count(),9);
+    for(const version of ['0.6.1','0.6.0','0.5.2','0.5.1','0.5.0','0.4.0','0.3.0','0.2.0','0.1.0']) assert.equal(await page.locator('[id="v'+version+'"]').count(),1);
+    assert.doesNotMatch(await page.locator('.version-history').innerText(), /source maps|IPC|AppID|unit test|renderer|GitHub Pages/i);
+    for(const width of [320,768,1440]){await page.setViewportSize({width,height:900});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
+    await page.locator('.version-index a[href="#v0.4.0"]').click();
+    assert.ok(await page.locator('[id="v0.4.0"]').isVisible());
+    await page.screenshot({path:path.join(out,'changelog.png'),fullPage:true});
     const reduced = await browser.newContext({
       viewport: { width: 1440, height: 1000 },
       reducedMotion: "reduce",
@@ -115,6 +132,8 @@ const assert = require("node:assert/strict");
         "privacy page",
         "no third-party requests",
         "actual local demo video decodes",
+        "nine player-facing launcher changelog versions",
+        "bubble effects animate, clean up and respect pause",
       ],
     };
     await fs.writeFile(path.join(out, "qa-result.json"), JSON.stringify(result, null, 2));
