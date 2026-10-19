@@ -5,7 +5,8 @@ English information website for the independent Flick Launcher project. Designed
 ## Files
 
 - `site/`: complete static website. No build step, framework, server-side application or API key required.
-- `.github/workflows/pages.yml`: publishes `site/` to GitHub Pages when `main` changes.
+- `scripts/deploy.cjs`: publishes `site/` to the `gh-pages` branch using Git.
+- `.github/workflows/pages.yml`: optional, manually triggered GitHub Actions deployment.
 - `site/config.json`: public repository and feedback links. No credentials belong here.
 - `scripts/preview.cjs`: optional local preview server.
 - `scripts/verify.cjs`: browser checks using Playwright and installed Chrome. QA outputs are excluded from Git.
@@ -20,7 +21,17 @@ Open `http://127.0.0.1:4174/flick-launcher-site/`. For browser QA, install Playw
 
 ## Publish
 
-Push this folder as its own Git repository. In repository Settings → Pages → Build and deployment, select **GitHub Actions**. The included workflow uploads only `site/` and deploys it. No manual build or deployment secret is required; the workflow uses GitHub's temporary token and Pages OIDC permissions.
+This repository is configured for **Deploy from a branch → gh-pages → / (root)** in Settings → Pages. Only website files from `site/` are copied into the publishing branch. Source code, scripts and documentation stay on `main`.
+
+After changing the website, run:
+
+```powershell
+node scripts/deploy.cjs
+```
+
+The script commits staged website changes, pushes `main`, and updates `gh-pages` through `git subtree`. It uses your normal Git authentication; it does not store or embed access tokens. GitHub then handles the Pages deployment. Keep other unrelated staged changes out of the checkout before using it.
+
+An optional manual GitHub Actions workflow is included. If switching to it, first select **GitHub Actions** as the Pages source, then run **Deploy GitHub Pages** from the Actions tab. It uploads only `site/` and uses GitHub's temporary token and Pages OIDC permissions. The default branch deployment does not require running that workflow.
 
 All local asset links are relative so the website works under a repository subpath. The website contains no installer download until an actual public release is available. Do not add a fake download URL or claim untested operating-system compatibility.
 
