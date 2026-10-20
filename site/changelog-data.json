@@ -1,5 +1,22 @@
 [
   {
+    "version": "0.6.3",
+    "title": "Repair, update or remove",
+    "changes": [
+      "Reopening Setup offers Repair, Update / reinstall and Remove for the selected existing installation.",
+      "Repair restores bundled launcher files while keeping profiles, worlds and settings. Update installs the version included in the downloaded Setup.",
+      "Read Windows and Android system requirements on the project website."
+    ]
+  },
+  {
+    "version": "0.6.2",
+    "title": "Sign in through your browser",
+    "changes": [
+      "Microsoft sign-in opens your browser and shows a device code, with a cancel option.",
+      "Sign-in still depends on Minecraft Services application approval."
+    ]
+  },
+  {
     "version": "0.6.1",
     "title": "A clearer console",
     "changes": [
