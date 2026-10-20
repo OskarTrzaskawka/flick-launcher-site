@@ -94,8 +94,8 @@ const assert = require("node:assert/strict");
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     await page.goto(origin + '/flick-launcher-site/changelog.html', {waitUntil:'networkidle'});
     assert.match(await page.title(), /Changelog/);
-    assert.equal(await page.locator('.version-entry').count(),9);
-    for(const version of ['0.6.1','0.6.0','0.5.2','0.5.1','0.5.0','0.4.0','0.3.0','0.2.0','0.1.0']) assert.equal(await page.locator('[id="v'+version+'"]').count(),1);
+    assert.equal(await page.locator('.version-entry').count(),11);
+    for(const version of ['0.6.3','0.6.2','0.6.1','0.6.0','0.5.2','0.5.1','0.5.0','0.4.0','0.3.0','0.2.0','0.1.0']) assert.equal(await page.locator('[id="v'+version+'"]').count(),1);
     assert.doesNotMatch(await page.locator('.version-history').innerText(), /source maps|IPC|AppID|unit test|renderer|GitHub Pages/i);
     for(const width of [320,768,1440]){await page.setViewportSize({width,height:900});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
     await page.locator('.version-index a[href="#v0.4.0"]').click();
@@ -132,7 +132,7 @@ const assert = require("node:assert/strict");
         "privacy page",
         "no third-party requests",
         "actual local demo video decodes",
-        "nine player-facing launcher changelog versions",
+        "eleven player-facing launcher changelog versions",
         "bubble effects animate, clean up and respect pause",
       ],
     };
