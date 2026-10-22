@@ -1,5 +1,16 @@
 [
   {
+    "version": "0.8.0",
+    "title": "A simpler workspace",
+    "changes": [
+      "Shorter labels, a cleaner home screen and fewer decorative effects.",
+      "Open Installation in Settings to install, repair or uninstall a managed Windows copy.",
+      "Setup shows maintenance first for an existing installation. Windows Apps also offers Modify.",
+      "Setup creates Uninstall Flick Launcher.exe in its installation folder. Portable copies remain separate.",
+      "Android has a shorter home screen with update, reinstall and system uninstall under App options."
+    ]
+  },
+  {
     "version": "0.7.0",
     "title": "Local profiles and CurseForge",
     "changes": [
