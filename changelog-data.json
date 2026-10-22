@@ -1,5 +1,15 @@
 [
   {
+    "version": "0.7.0",
+    "title": "Local profiles and CurseForge",
+    "changes": [
+      "Microsoft sign-in has been removed. Create a local profile with your player name. Local profiles do not grant access to authenticated servers.",
+      "Choose Modrinth or CurseForge in Discover to find compatible mods, resource packs, shaders and modpacks.",
+      "CurseForge downloads respect author permissions and verify file hashes. Required mod dependencies are installed automatically.",
+      "Windows removes retired Microsoft accounts from current launcher settings while keeping game profiles and worlds. Add a local player profile to continue."
+    ]
+  },
+  {
     "version": "0.6.3",
     "title": "Repair, update or remove",
     "changes": [
