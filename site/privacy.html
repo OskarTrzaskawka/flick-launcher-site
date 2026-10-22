@@ -25,7 +25,7 @@
     <main class="section-wrap privacy">
       <p class="eyebrow">PROJECT WEBSITE / PRIVACY</p>
       <h1>A small website.<br />A clear explanation.</h1>
-      <p class="privacy-date">Last updated: October 19, 2026</p>
+      <p class="privacy-date">Last updated: October 22, 2026</p>
       <h2>This website</h2>
       <p>
         This is a static information website for Flick Launcher. It has no sign-in, contact form,
@@ -47,17 +47,12 @@
       <p>
         The desktop launcher is a separate application. The preview stores profiles, settings,
         worlds and downloaded content on the user's computer. It contacts Minecraft distribution
-        services, Java runtime providers and Modrinth for requested content. Microsoft account
-        integration, when configured and available, contacts Microsoft and Minecraft authentication
-        services. The website does not receive these account sessions.
+        services, Java runtime providers and Modrinth for requested content. CurseForge requests use the CurseForge API and approved CDN downloads. The website receives no account data.
       </p>
       <p>
-        In the current preview, Microsoft refresh tokens are stored locally using Windows-backed
-        encryption through Electron safeStorage. Microsoft sign-in has not been enabled or verified
-        in the default development build. This website does not ask for Microsoft credentials or
-        tokens.
+        Current releases use local player profiles only. Microsoft sign-in and session refresh have been removed. Windows removes retired online accounts from its current configuration; Android clears their tokens and converts them to local profiles. Game profiles and worlds are kept.
       </p>
-      <h2>Wardrobe and server discovery</h2><p>When requested, the launcher contacts Craftdex, Minecraft Java Servers and Cloud Client to retrieve skin or server directories. These providers receive the network request, including the public IP address. Visible server cards also request status from mcsrvstat.us, which receives the server address being checked and the network request. Modrinth icons and server icons are cached locally; cached status and icons reduce repeat requests. Minecraft textures come from Mojang's texture servers. Imported skins, capes, favourites and cached directories are stored on your computer. Username skin lookup queries Mojang services; Microsoft skin and cape changes use the selected account's Minecraft session. Optional CustomSkinLoader is downloaded from Modrinth and follows its own settings and privacy behaviour.</p><h2>Updates and support reports</h2><p>When you choose to check for launcher updates, Flick contacts the project GitHub Releases API. GitHub receives the network request, including the public IP address. Update downloads are verified against the asset SHA-256 digest. Profile backups, imports and restores stay on your device. Support reports are exported to a file only when requested; known account credentials, player names and local user paths are removed. Review the report before sharing it yourself. On-demand process measurements remain local. Flick does not send player counters or usage analytics to a backend.</p><h2>Windows integration</h2><p>Starting with Windows is optional and disabled initially. Enabling it registers a startup entry on the device. Closing to the tray keeps the local launcher process running until Quit is selected. The website does not receive these settings or local logs.</p>
+      <h2>Wardrobe and server discovery</h2><p>When requested, the launcher contacts Craftdex, Minecraft Java Servers and Cloud Client to retrieve skin or server directories. These providers receive the network request, including the public IP address. Visible server cards also request status from mcsrvstat.us, which receives the server address being checked and the network request. Modrinth icons and server icons are cached locally; cached status and icons reduce repeat requests. Minecraft textures come from Mojang's texture servers. Imported skins, capes, favourites and cached directories are stored on your computer. Username skin lookup queries Mojang services. Local skins and capes remain on the device. Optional CustomSkinLoader is downloaded from Modrinth and follows its own settings and privacy behaviour.</p><h2>Updates and support reports</h2><p>When you choose to check for launcher updates, Flick contacts the project GitHub Releases API. GitHub receives the network request, including the public IP address. Update downloads are verified against the asset SHA-256 digest. Profile backups, imports and restores stay on your device. Support reports are exported to a file only when requested; known account credentials, player names and local user paths are removed. Review the report before sharing it yourself. On-demand process measurements remain local. Flick does not send player counters or usage analytics to a backend.</p><h2>Windows integration</h2><p>Starting with Windows is optional and disabled initially. Enabling it registers a startup entry on the device. Closing to the tray keeps the local launcher process running until Quit is selected. The website does not receive these settings or local logs.</p>
       <h2>Discord activity</h2>
       <p>
         The desktop preview can communicate with the locally running Discord desktop client to
