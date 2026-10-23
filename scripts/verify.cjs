@@ -29,12 +29,7 @@ const assert = require("node:assert/strict");
     await page.waitForTimeout(800);
     await page.screenshot({ path: path.join(out, "desktop.png"), fullPage: true });
     await page.screenshot({path:path.join(out,"hero.png")});
-    await page.locator("video").evaluate(v=>{v.preload="metadata";v.load();});
-    await page.waitForFunction(()=>document.querySelector("video").readyState>=1);
-    const media=await page.locator("video").evaluate(v=>({duration:v.duration,width:v.videoWidth,height:v.videoHeight,error:v.error?.message}));
-    assert.ok(media.duration>5 && media.width===3840 && media.height===2160 && !media.error);
-    await page.locator("video").evaluate(async v=>{v.currentTime=v.duration/2;await new Promise(resolve=>v.addEventListener("seeked",resolve,{once:true}));});
-    assert.ok(await page.locator("video").evaluate(v=>v.currentTime>1));
+    assert.equal(await page.locator("video").count(),0);
     assert.equal(await page.title(), "Flick Launcher - Minecraft Java");
     assert.equal(await page.locator("h1").count(), 1);
     assert.equal(await page.locator('#ambient,.button-bubbles').count(),0);
@@ -121,7 +116,7 @@ const assert = require("node:assert/strict");
         "mobile navigation",
         "privacy page",
         "no third-party requests",
-        "actual local demo video decodes",
+        "demo video removed",
         "thirteen player-facing launcher changelog versions",
         "no decorative particle loops",
       ],
